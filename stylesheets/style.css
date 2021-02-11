@@ -1,22 +1,24 @@
 /* line 1, ../sass/style.scss */
-body {
+body, html {
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* line 4, ../sass/style.scss */
+/* line 6, ../sass/style.scss */
 header {
   background-image: url(https://images.unsplash.com/photo-1606787733558-847bdd145796?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  height: 400px;
+  height: 370px;
   position: relative;
 }
-/* line 12, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 header:after {
   background-color: rgba(0, 128, 128, 0.75);
-  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 0 21%, 0 0, 73% 0, 100% 71%, 24% 100%, 100% 71%, 100% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, 19% 100%, 0 45%, 0 0, 80% 0, 100% 61%, 24% 100%, 100% 61%, 100% 0%);
   /* clip-path: polygon(0 0, 75% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%); */
   /* clip-path: polygon(0 0, 100% 1%, 100% 63%, 0% 100%); */
   width: 100%;
@@ -26,8 +28,15 @@ header:after {
   content: "";
   display: block;
 }
-/* line 30, ../sass/style.scss */
+@media screen and (max-width: 768px) {
+  /* line 14, ../sass/style.scss */
+  header:after {
+    clip-path: polygon(0% 0%, 0% 45%, 19% 100%, 0 45%, 0 0, 69% 0, 100% 75%, 24% 100%, 100% 75%, 100% 0%);
+  }
+}
+/* line 36, ../sass/style.scss */
 header .content {
+  box-sizing: border-box;
   background: white;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 45%, rgba(249, 249, 252, 0.83267) 55%, rgba(0, 212, 255, 0) 100%);
   width: 100%;
@@ -38,24 +47,41 @@ header .content {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding-left: 13%;
 }
-/* line 57, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
+header .content h1, header .content p {
+  max-width: 61%;
+  color: #253746;
+}
+/* line 70, ../sass/style.scss */
 header .content h1 {
-  margin-left: 25%;
-  margin-right: 25%;
+  margin: 0;
+  font-family: "Questrial",sans-serif;
+  font-weight: 100;
+  font-size: 3.875rem;
+  line-height: 1.1;
+}
+/* line 77, ../sass/style.scss */
+header .content p {
+  font-family: "Questrial",sans-serif;
+  font-weight: 500;
+  margin-top: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
