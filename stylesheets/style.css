@@ -74,7 +74,7 @@ header .content p {
   margin-top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 468px) {
   /* line 88, ../sass/style.scss */
   header {
     height: 375px;
